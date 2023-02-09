@@ -31,25 +31,31 @@ import Modelos.Usuario;
 
 /**
  * @author Pablo López
- * Clase con los controladores de la Web
+ * Clase controlador del formulario
  */
 @Controller
 public class ControladorFormulario {
 	 
-	 	//Controlador de la ruta /segund
+	 	//CONTROLADOR DEL FORMULARIO DE INTRODUCCIÓN (formulario_registro.jsp)
 	    @RequestMapping(value="/formulario")
+	    //Model - modelo: Recoge los atributos del modelo Usuario
 	    public String showForm(Model modelo) {
+	    	//Se crea una instancia nueva de usuario
 	        Usuario usuario = new Usuario();
-	        modelo.addAttribute("usuario", usuario);
+	        //Se añaden los atributos a "usuarioVista", la variable que llamo en la vista
+	        modelo.addAttribute("usuarioVista", usuario);
 	        return "formulario_registro";
 	    }
 	    
-	    //MODELO QUE ENVIA A EL MOSTRADO DE DATOS REGISTRADOS
+	    
+	    
+	    //MODELO QUE ENVIA LOS DATOS REGISTRADOS (formulario_enviado.jsp)
 	    @PostMapping("/registrado")
-	    public String submitForm(@ModelAttribute("usuario") Usuario usuario) {
-	         
-	        System.out.println(usuario);
-	         
+	    //"submitForm" guarda los datos que hemos introducido en la vista anterior
+	    //@ModelAttribute sirve para recuperar atributos del @RequestMapping
+	    //Todo esto se devuelve a la vista que muestra los resultaods(formulario_enviado.jsp)
+	    public String submitForm(@ModelAttribute("usuarioVista") Usuario usuario) {
+	    	
 	        return "formulario_enviado";
 	    }
 	    

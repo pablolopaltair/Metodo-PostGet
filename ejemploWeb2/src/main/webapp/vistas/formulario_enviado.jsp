@@ -13,8 +13,8 @@
         <h2>RESULTADOS FORMULARIO</h2>
     </div>
     <div class="contenido">
-        <span>Nombre:</span><span>${usuario.nombre}</span><br/>
-        <span>E-mail:</span><span>${usuario.email}</span><br/>
+        <span>Nombre: </span><span>${usuarioVista.nombre}</span><br/>
+        <span>E-mail: </span><span>${usuarioVista.email}</span><br/>
     </div>
 
 </div>
