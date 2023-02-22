@@ -7,6 +7,7 @@
   <a id="index" class="active" href="/ejemploWeb">Index</a> 
   <a id="list" href="/ejemploWeb/lista">Lista</a>
   <a id="form" href="/ejemploWeb/formulario">Formulario</a>
+  <a id="menu" href="/ejemploWeb/gestion-portatiles">Gestion Portatiles</a>
 </div>
 
 

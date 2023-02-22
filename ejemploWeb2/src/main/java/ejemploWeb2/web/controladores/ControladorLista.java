@@ -30,6 +30,8 @@ import Modelos.Empleado;
  */
 @Controller
 public class ControladorLista {
+    protected final Log logger = LogFactory.getLog(getClass());
+
 	 
 	 	//Controlador de la ruta /segund
 	    @RequestMapping(value="/lista")
@@ -47,11 +49,14 @@ public class ControladorLista {
 	    	empList.add(empleado3);
 	    	empList.add(empleado4);
 	    	
+	    	
+	    	
 	    	//CLAVE: ("Nombre de la clave", variable)
 	    	miModelo.put("listado", empList); 
-
 	    	//Devuelve 
 	        return new ModelAndView("lista", "miModelo", miModelo);
-	    } 
+	        
+	    }
+	   
 	    
 }
