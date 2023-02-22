@@ -4,14 +4,13 @@
   <artifactId>ejemploWeb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
- <build>
+  <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <release>18</release>
+          <release>17</release>
         </configuration>
       </plugin>
       <plugin>
@@ -20,7 +19,6 @@
       </plugin>
     </plugins>
   </build>
-  
   <properties>
   	<org.springframework.version>5.0.6.RELEASE</org.springframework.version>
   </properties>
@@ -51,8 +49,12 @@
   		<artifactId>taglibs-standard-impl</artifactId>
   		<version>1.2.5</version>
   	</dependency>
-  	
+  	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
+	    <scope>provided</scope>
+	</dependency>
 
-  	
   </dependencies>
 </project>
